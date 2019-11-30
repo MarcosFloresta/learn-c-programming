@@ -44,18 +44,19 @@ Keywords are predefined, reserved words used in programming that have special me
 int money;
 ```
 Here, `int` is a keyword that indicates `money` is a variable of type `int` (integer).
-As C is a case sensitive language, all keywords must be written in lowercase. Here is a list of all keywords allowed in ANSI C.
-C Keywords
-```
-auto        double	    int	        struct
-break	    else	    long	    switch
-case	    enum	    register	typedef
-char	    extern	    return	    union
-continue	for	        signed	    void
-do	        if	        static	    while
-default	    goto	    sizeof	    volatile
-const	    float	    short	    unsigned
-```
+As C is a case sensitive language, all keywords must be written in lowercase. Here is a list of all keywords allowed in ANSI C. C Keywords
+
+| C Keywords | - | - | - |
+| --- | --- | --- | --- |
+| auto | double | int | struct |
+break | else | long | switch |
+case | enum | register| typedef |
+char | extern | return | union |
+continue | for | signed | void |
+do | if | static | while |
+default | goto | sizeof | volatile |
+const | float | short | unsigned |
+
 All these keywords, their syntax, and application will be discussed in their respective topics. However, if you want a brief overview of these keywords without going further, visit List of all keywords in C programming.
 
 ***
