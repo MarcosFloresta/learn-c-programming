@@ -10,7 +10,7 @@ char c[] = "c string";
 
 When the compiler encounters a sequence of characters enclosed in the double quotation marks, it appends a null character `\0` at the end by default.
 
-img - Memory diagram of strings in C programming
+![Memory diagram of strings in C programming](/images/c-string.jpg)
 
 ## How to declare a string?
 
@@ -20,7 +20,7 @@ Here's how you can declare strings:
 char s[5];
 ```
 
-img - string declaration in C programming
+![string declaration in C programming](/images/c-string-declaration_0.jpg)
 
 Here, we have declared a string of 5 characters.
 
@@ -35,7 +35,7 @@ char c[] = {'a', 'b', 'c', 'd', '\0'};
 char c[5] = {'a', 'b', 'c', 'd', '\0'};
 ```
 
-img - Initialization of strings in C programming
+![Initialization of strings in C programming](/images/c-string-initialization.jpg)
 
 Let's take another example:
 
