@@ -34,7 +34,7 @@ To learn more about test expression (when the test expression is evaluated to tr
 
 ### Flowchart of while loop
 
-flowchart of while loop in C programming
+![flowchart of while loop in C programming](/images/c-while-loop_0.jpg)
 
 Example 1: while loop
 ```
@@ -90,7 +90,7 @@ while (testExpression);
 
 ### Flowchart of do...while Loop
 
-do while loop flowchart in C programming
+![do while loop flowchart in C programming](/images/c-do-while-loop_0.jpg)
 
 Example 2: do...while loop
 ```
