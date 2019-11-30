@@ -88,7 +88,7 @@ In programming, argument refers to the variable passed to the function. In the a
 
 The parameters `a` and `b` accepts the passed arguments in the function definition. These arguments are called formal parameters of the function.
 
-img - Passing arguments to a function
+![Passing arguments to a function](/images/function-c-programming.jpg)
 
 The type of arguments passed to a function and the formal parameters must match, otherwise, the compiler will throw an error.
 
@@ -102,7 +102,7 @@ The return statement terminates the execution of a function and returns a value 
 
 In the above example, the value of the `result` variable is returned to the main function. The `sum` variable in the `main()` function is assigned this value.
 
-img - Return statement of a function
+![Return statement of a function](/images/c-return-statement.jpg)
 
 ### Syntax of return statement
 
