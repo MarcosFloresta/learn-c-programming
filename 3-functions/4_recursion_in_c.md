@@ -22,7 +22,7 @@ int main()
 }
 ```
 
-img - How recursion works in C programming?
+![How recursion works in C programming?](/images/how-recursion-works-c_0.jpg)
 
 The recursion continues until some condition is met to prevent it.
 
@@ -60,7 +60,7 @@ Suppose, the value of `n` inside `sum()` is 3 initially. During the next functio
 
 When `n` is equal to 0, the `if` condition fails and the `else` part is executed returning the sum of integers ultimately to the `main()` function.
 
-img - Calculation of sum of natural number using recursion
+![Calculation of sum of natural number using recursion](/images/recursion-natural-numbers.png)
 
 ## Advantages and Disadvantages of Recursion
 
