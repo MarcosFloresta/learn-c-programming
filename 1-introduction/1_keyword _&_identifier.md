@@ -14,7 +14,7 @@ Lowercase: a b c ... x y z
 ```
 C accepts both lowercase and uppercase alphabets as variables and functions.
 
-### Difits
+### Digits
 
 ```
 0 1 2 3 4 5 6 7 8 9
