@@ -14,7 +14,7 @@ The break statement is almost always used with `if...else`` statement inside the
 
 ### How break statement works?
 
-Working of break statement
+![Working of break statement](/images/c-break-statement-works.jpg)
 
 Example 1: break statement
 ```
@@ -67,7 +67,7 @@ The `continue` statement is almost always used with the `if...else` statement.
 
 ## How continue statement works?
 
-Working of continue statement in C programming
+![Working of continue statement in C programming](/images/c-continue-statement-works.jpg)
 
 Example 2: continue statement
 ```
