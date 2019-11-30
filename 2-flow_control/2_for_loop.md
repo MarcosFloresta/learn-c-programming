@@ -36,7 +36,7 @@ To learn more about test expression (when the test expression is evaluated to tr
 
 ### for loop Flowchart
 
-Flowchart of for loop in C programming
+![Flowchart of for loop in C programming](/images/c-for-loop.jpg)
 
 Example 1: for loop
 ```
