@@ -19,19 +19,8 @@ The `if` statement evaluates the test expression inside the parenthesis `()`.
 
 * If the test expression is evaluated to true, statements inside the body of `if` are executed.
 * If the test expression is evaluated to false, statements inside the body of `if` are not executed.
-How if statement works in C programming?
 
 ![How if statement works in C programming?](/images/working-c-if-statement.jpg)
-
-```
-//Expression is true.
-int test = 5;
-if (test < 10>)
-{
-    //code
-}
-    //code after if
-```
 
 To learn more about when test expression is evaluated to true (non-zero value) and false (0), check relational and logical operators.
 
@@ -90,7 +79,8 @@ If the test expression is evaluated to false,
 
 * statements inside the body of else are executed
 * statements inside the body of if are skipped from execution.
-How if...else statement works in C programming?
+
+![How if...else statement works in C programming?](/images/how-if-else-works-c-programming.jpg)
 
 Example 2: if...else statement
 ```
