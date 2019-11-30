@@ -11,6 +11,7 @@ float x[3][4];
 Here, `x` is a two-dimensional (2d) array. The array can hold 12 elements. You can think the array as a table with 3 rows and each row has 4 columns.
 
 imag - Two dimensional array in C programming
+
 |       | Column 1 | Column 2 | Column 3 | Column 4 |
 |-------|----------|----------|----------|----------|
 | Row 1 | x[0][0]  | x[0][1]  | x[0][2]  | x[0][3]  |
