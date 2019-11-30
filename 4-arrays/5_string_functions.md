@@ -2,7 +2,7 @@
 
 In this article, you'll learn to manipulate strings in C using library functions such as gets(), puts, strlen() and more. You'll learn to get string from the user and perform operations on the string.
 
-img - String manipulations in C
+![String manipulations in C](/images/c-string-manipulation.jpg)
 
 You need to often manipulate strings according to the need of a problem. Most, if not all, of the time string manipulation can be done manually but, this makes programming complex and large.
 
