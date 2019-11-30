@@ -66,7 +66,7 @@ And, the compiler starts executing the codes inside `functionName()`.
 
 The control of the program jumps back to the `main()` function once code inside the function definition is executed.
 
-How function works in C programming?
+![How function works in C programming?](/images/function-c-programming.jpg)
 
 Note, function names are identifiers and should be unique.
 
