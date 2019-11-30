@@ -38,7 +38,7 @@ By the way, the `default` clause inside the `switch` statement is optional.
 
 ### switch Statement Flowchart
 
-Flowchart of switch statement
+![Flowchart of switch statement](/images/flowchart-switch-statement.jpg)
 
 Example: Simple Calculator
 ```
