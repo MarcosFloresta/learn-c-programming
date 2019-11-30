@@ -2,7 +2,7 @@
 
 In this tutorial, you will learn to work with arrays. You will learn to declare, initialize and access array elements of an array with the help of examples.
 
-img - C arrays
+![C arrays](/images/c-arrays.jpg)
 
 An array is a variable that can store multiple values. For example, if you want to store 100 integers, you can create an array for it.
 
@@ -32,11 +32,7 @@ You can access elements of an array by indices.
 
 Suppose you declared an array `mark` as above. The first element is `mark[0]`, the second element is `mark[1]` and so on.
 
-imag - C Array declaration 
-
-| mark[0] | mark[1] | mark[2] | mark[3] | mark[4] |
-| --- | --- | --- | --- | --- |
-| [-] | [-] | [-] | [-] | [-] |
+![C Array declaration](/images/c-array-declaration.jpg)
 
 ### Few keynotes:
 
@@ -62,11 +58,7 @@ int mark[] = {19, 10, 8, 17, 9};
 
 Here, we haven't specified the size. However, the compiler knows its size is 5 as we are initializing it with 5 elements.
 
-img - Initialize an array in C programming
-
-| mark[0] | mark[1] | mark[2] | mark[3] | mark[4] |
-| --- | --- | --- | --- | --- |
-| [19] | [10] | [8] | [17] | [9] |
+![Initialize an array in C programming](/images/c-array-initialization.jpg)
 
 Here,
 
