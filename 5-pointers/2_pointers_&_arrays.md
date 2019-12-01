@@ -47,8 +47,9 @@ Similarly,
 * ...
 * Basically, &x[i] is equivalent to x+i and x[i] is equivalent to *(x+i).
   
-```
+
 Example 1: Pointers and Arrays
+```
 #include <stdio.h>
 int main() {
   int i, x[6], sum = 0;
