@@ -183,24 +183,34 @@ Value of c: 2
 ### Explanation of the program
 
 1. `int* pc, c;`
+
     ![A pointer variable and a normal variable is created.](/images/pointer-1.jpg)
+
     Here, a pointer `pc` and a normal variable `c`, both of type int, is created.
     Since `pc` and `c` are not initialized at initially, pointer `pc` points to either no address or a random address. And, variable `c` has an address but contains random garbage value.
  
 2. `c = 22;`
+
     ![22 is assigned to variable c.](/images/pointer-2.jpg)
+
     This assigns 22 to the variable `c`. That is, 22 is stored in the memory location of variable `c`.
  
 3. `pc = &c;`
+
     ![Address of variable c is assigned to pointer pc.](/images/pointer-3.jpg)
+
     This assigns the address of variable `c` to the pointer `pc`.
  
 4. `c = 11;`
+   
     ![11 is assigned to variable c.](/images/pointer-4.jpg)
+
     This assigns 11 to variable `c`.
  
 5. `*pc = 2;`
+   
     ![5 is assigned to pointer variable's address.](/images/pointer-5.jpg)
+    
     This change the value at the memory location pointed by the pointer `pc` to 2.
 
 ## Common mistakes when working with pointers
