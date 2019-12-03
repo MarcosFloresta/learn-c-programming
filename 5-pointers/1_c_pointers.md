@@ -10,13 +10,13 @@ If you have a variable `var` in your program, `&var` will give you its address i
 
 We have used address numerous times while using the `scanf()` function.
 
-```
+```c
 scanf("%d", &var);
 ```
 
 Here, the value entered by the user is stored in the address of var variable. Let's take a working example.
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -27,15 +27,17 @@ int main()
   return 0;
 }
 ```
+
 Output
-```
-var: 5 
+
+```c
+var: 5
 address of var: 2686778
 ```
 
 **Note:** You will probably get a different address when you run the above code.
 
-## C Pointers
+## Pointers
 
 Pointers (pointer variables) are special variables that are used to store addresses rather than values.
 
@@ -43,7 +45,7 @@ Pointers (pointer variables) are special variables that are used to store addres
 
 Here is how we can declare pointers.
 
-```
+```c
 int* p;
 ```
 
@@ -51,24 +53,24 @@ Here, we have declared a pointer `p` of `int` type.
 
 You can also declare pointers in these ways.
 
-```
+```c
 int *p1;
 int * p2;
 ```
-***
+
 Let's take another example of declaring pointers.
 
-```
+```c
 int* p1, p2;
 ```
 
-Here, we have declared a pointer `p1 and a normal variable `p2`.
+Here, we have declared a pointer `p1 and a normal variable`p2`.
 
 ## Assigning addresses to Pointers
 
 Let's take an example.
 
-```
+```c
 int* pc, c;
 c = 5;
 pc = &c;
@@ -80,13 +82,13 @@ Here, 5 is assigned to the `c` variable. And, the address of `c` is assigned to 
 
 To get the value of the thing pointed by the pointers, we use the `*` operator. For example:
 
-```
+```c
 int* pc, c;
 c = 5;
 pc = &c;
 printf("%d", *pc);   // Output: 5
 
-```
+```c
 Here, the address of `c` is assigned to the `pc` pointer. To get the value stored in that address, we used `*pc`.
 
 **Note:** In the above example, `pc` is a pointer, not `*pc`. You cannot and should not do something like `*pc = &c`;
@@ -97,7 +99,7 @@ By the way, `*` is called the dereference operator (when working with pointers).
 
 Let's take an example.
 
-```
+```c
 int* pc, c;
 c = 5;
 pc = &c;
@@ -112,7 +114,7 @@ Then, we changed the value of `c` to 1. Since `pc` and the address of `c` is the
 
 Let's take another example.
 
-```
+```c
 int* pc, c;
 c = 5;
 pc = &c;
@@ -127,7 +129,7 @@ Then, we changed `*pc` to 1 using `*pc = 1;`. Since `pc` and the address of `c` 
 
 Let's take one more example.
 
-```
+```c
 int* pc, c, d;
 c = 5;
 d = -15;
@@ -141,32 +143,35 @@ Then, the address of d is assigned to the pc pointer using pc = &d;. Since d is 
 
 Example: Working of Pointers
 Let's take a working example.
-```
+
+```c
 #include <stdio.h>
 int main()
 {
    int* pc, c;
-   
+
    c = 22;
    printf("Address of c: %p\n", &c);
    printf("Value of c: %d\n\n", c);  // 22
-   
+
    pc = &c;
    printf("Address of pointer pc: %p\n", pc);
    printf("Content of pointer pc: %d\n\n", *pc); // 22
-   
+
    c = 11;
    printf("Address of pointer pc: %p\n", pc);
    printf("Content of pointer pc: %d\n\n", *pc); // 11
-   
+
    *pc = 2;
    printf("Address of c: %p\n", &c);
    printf("Value of c: %d\n\n", c); // 2
    return 0;
 }
 ```
+
 Output
-```
+
+```c
 Address of c: 2686784
 Value of c: 22
 
@@ -188,36 +193,36 @@ Value of c: 2
 
     Here, a pointer `pc` and a normal variable `c`, both of type int, is created.
     Since `pc` and `c` are not initialized at initially, pointer `pc` points to either no address or a random address. And, variable `c` has an address but contains random garbage value.
- 
+
 2. `c = 22;`
 
     ![22 is assigned to variable c.](/images/pointer-2.jpg)
 
     This assigns 22 to the variable `c`. That is, 22 is stored in the memory location of variable `c`.
- 
+
 3. `pc = &c;`
 
     ![Address of variable c is assigned to pointer pc.](/images/pointer-3.jpg)
 
     This assigns the address of variable `c` to the pointer `pc`.
- 
+
 4. `c = 11;`
-   
+
     ![11 is assigned to variable c.](/images/pointer-4.jpg)
 
     This assigns 11 to variable `c`.
- 
+
 5. `*pc = 2;`
-   
+
     ![5 is assigned to pointer variable's address.](/images/pointer-5.jpg)
-    
+
     This change the value at the memory location pointed by the pointer `pc` to 2.
 
 ## Common mistakes when working with pointers
 
 Suppose, you want pointer `pc` to point to the address of `c`. Then,
 
-```
+```c
 int c, *pc;
 // pc is address but c is not
 pc = c; // Error
@@ -225,19 +230,19 @@ pc = c; // Error
 *pc = &c; // Error
 // both &c and pc are addresses
 pc = &c;
-// both c and *pc values 
+// both c and *pc values
 *pc = c;
 ```
 
 Here's an example of pointer syntax beginners often find confusing.
 
-```
+```c
 #include <stdio.h>
 int main() {
    int c = 5;
    int *p = &c;
    printf("%d", *p);  // 5
-   return 0; 
+   return 0;
 }
 ```
 
@@ -245,13 +250,13 @@ int main() {
 
 It's because
 
-```
+```c
 int *p = &c;
 ```
 
 is equivalent to
 
-```
+```c
 int *p:
 p = &c;
 ```
@@ -260,8 +265,8 @@ In both cases, we are creating a pointer `p` (not `*p`) and assigning `&c` to it
 
 To avoid this confusion, we can use the statement like this:
 
-```
+```c
 int* p = &c;
 ```
-***
+
 Now you know what pointers are, you will learn how pointers are related to arrays in the next tutorial.
