@@ -6,12 +6,15 @@ In this tutorial, you will learn about variables and rules for naming a variable
 
 In programming, a variable is a container (storage area) to hold data.
 To indicate the storage area, each variable should be given a unique name (identifier). Variable names are just the symbolic representation of a memory location. For example:
-```
+
+```c
 int playerScore = 95;
 ```
+
 Here, `playerScore` is a variable of int type. Here, the variable is assigned an integer value `95`.
 The value of a variable can be changed, hence the name variable.
-```
+
+```c
 char ch = 'a';
 // some code
 ch = 'l';
@@ -26,11 +29,13 @@ ch = 'l';
 **Note**: You should always try to give meaningful names to variables. For example: `firstName` is a better variable name than `fn`.
 
 C is a strongly typed language. This means that the variable type cannot be changed once it is declared. For example:
-```
+
+```c
 int number = 5;      // integer variable
 number = 5.5;        // error
 double number;       // error
 ```
+
 Here, the type of `number` variable is `int`. You cannot assign a floating-point (decimal) value 5.5 to this variable. Also, you cannot redefine the data type of the variable to `double`. By the way, to store the decimal values in C, you need to declare its type to either `double` or `float`.
 
 ## Literals
@@ -40,6 +45,7 @@ A literal is a value (or an identifier) whose value cannot be altered in a progr
 Here, `1,2.5` and `'c'` are literals. Why? You cannot assign different values to these terms.
 
 ## 1. Integers
+
 An integer is a numeric literal(associated with numbers) without any fractional or exponential part. There are three types of integer literals in C programming:
 
 * decimal (base 10)
@@ -47,17 +53,20 @@ An integer is a numeric literal(associated with numbers) without any fractional 
 * hexadecimal (base 16)
 
 For example:
-```
+
+```c
 Decimal: 0, -9, 22 etc
 Octal: 021, 077, 033 etc
 Hexadecimal: 0x7f, 0x2a, 0x521 etc
 ```
+
 In C programming, octal starts with a 0, and hexadecimal starts with a 0x.
 
 ## 2. Floating-point Literals
 
 A floating-point literal is a numeric literal that has either a fractional form or an exponent form. For example:
-```
+
+```c
 -2.0
 0.0000234
 -0.22E-5
@@ -76,26 +85,28 @@ Sometimes, it is necessary to use characters that cannot be typed or has special
 In order to use these characters, escape sequences are used.
 
 Escape Sequences
-```
-Escape Sequences	Character
-\b	                Backspace
-\f	                Form feed
-\n	                Newline
-\r	                Return
-\t	                Horizontal tab
-\v	                Vertical tab
-\\	                Backslash
-\'	                Single quotation mark
-\"	                Double quotation mark
-\?	                Question mark
-\0	                Null character
-```
-For example: \n is used for a newline. The backslash \ causes escape from the normal way the characters are handled by the compiler.
+
+| Escape Sequences | Character |
+| --- | --- |
+| \b | Backspace |
+| \f | Form feed |
+| \n | Newline |
+| \r | Return |
+| \t | Horizontal tab |
+| \v | Vertical tab |
+| \\ | Backslash |
+| \' | Single quotation mark |
+| \" | Double quotation mark |
+| \? | Question mark |
+| \0 | Null character |
+
+for example: \n is used for a newline. The backslash \ causes escape from the normal way the characters are handled by the compiler.
 
 ## 5. String Literals
 
 A string literal is a sequence of characters enclosed in double-quote marks. For example:
-```
+
+```c
 "good"                  //string constant
 ""                     //null string constant
 "      "               //string constant of six white space
@@ -106,14 +117,18 @@ A string literal is a sequence of characters enclosed in double-quote marks. For
 ## Constants
 
 If you want to define a variable whose value cannot be changed, you can use the const keyword. This will create a constant. For example,
-```
+
+```c
 const double PI = 3.14;
 ```
+
 Notice, we have added keyword `const`.
 
 Here, `PI` is a symbolic constant; its value cannot be changed.
-```
+
+```c
 const double PI = 3.14;
 PI = 2.9; //Error
 ```
+
 You can also define a constant using the `#define` preprocessor directive.
