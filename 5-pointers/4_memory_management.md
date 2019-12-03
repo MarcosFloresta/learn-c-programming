@@ -6,7 +6,7 @@ As you know, an array is a collection of a fixed number of values. Once the size
 
 Sometimes the size of the array you declared may be insufficient. To solve this issue, you can allocate memory manually during run-time. This is known as dynamic memory allocation in C programming.
 
-To allocate memory dynamically, library functions are `malloc()`, `calloc()`, `realloc()` and `free()` are used. These functions are defined in the `<stdlib.h> `header file.
+To allocate memory dynamically, library functions are `malloc()`, `calloc()`, `realloc()` and `free()` are used. These functions are defined in the `<stdlib.h>`header file.
 
 ## C malloc()
 
@@ -16,12 +16,13 @@ The `malloc()` function reserves a block of memory of the specified number of by
 
 ### Syntax of malloc()
 
-```
+```c
 ptr = (castType*) malloc(size);
 ```
 
 Example
-```
+
+```c
 ptr = (int*) malloc(100 * sizeof(float));
 ```
 
@@ -37,12 +38,13 @@ The `malloc()` function allocates memory and leaves the memory uninitialized. Wh
 
 ### Syntax of calloc()
 
-```
+```c
 ptr = (castType*)calloc(n, size);
 ```
 
 Example:
-```
+
+```c
 ptr = (float*) calloc(25, sizeof(float));
 ```
 
@@ -54,14 +56,15 @@ Dynamically allocated memory created with either `calloc()` or `malloc()` doesn'
 
 ### Syntax of free()
 
-```
+```c
 free(ptr);
 ```
 
 This statement frees the space allocated in the memory pointed by `ptr`.
 
 Example 1: malloc() and free()
-```
+
+```c
 // Program to calculate the sum of n numbers entered by the user
 #include <stdio.h>
 #include <stdlib.h>
@@ -71,9 +74,9 @@ int main()
     printf("Enter number of elements: ");
     scanf("%d", &n);
     ptr = (int*) malloc(n * sizeof(int));
- 
+
     // if memory cannot be allocated
-    if(ptr == NULL)                     
+    if(ptr == NULL)
     {
         printf("Error! memory not allocated.");
         exit(0);
@@ -95,7 +98,8 @@ int main()
 Here, we have dynamically allocated the memory for n number of int.
 
 Example 2: calloc() and free()
-```
+
+```c
 // Program to calculate the sum of n numbers entered by the user
 #include <stdio.h>
 #include <stdlib.h>
@@ -128,14 +132,15 @@ If the dynamically allocated memory is insufficient or more than required, you c
 
 ### Syntax of realloc()
 
-```
+```c
 ptr = realloc(ptr, x);
 ```
 
 Here, `ptr` is reallocated with a new size `x`.
 
 Example 3: realloc()
-```
+
+```c
 #include <stdio.h>
 #include <stdlib.h>
 int main()
@@ -162,7 +167,7 @@ int main()
 
 When you run the program, the output will be:
 
-```
+```c
 Enter size: 2
 Addresses of previously allocated memory:26855472
 26855476
