@@ -8,11 +8,11 @@ The prototype and data definitions of these functions are present in their respe
 
 If you want to use the `printf()` function, the header file `<stdio.h>` should be included.
 
-```
+```c
 #include <stdio.h>
 int main()
 {
-   printf("Catch me if you can."); 
+   printf("Catch me if you can.");
 }
 ```
 
@@ -21,28 +21,21 @@ If you try to use `printf()` without including the `stdio.h` header file, you wi
 ## Advantages of Using C library functions
 
 1. They work
-
-One of the most important reasons you should use library functions is simply because they work. These functions have gone through multiple rigorous testing and are easy to use.
-
+   One of the most important reasons you should use library functions is simply because they work. These functions have gone through multiple rigorous testing and are easy to use.
 2. The functions are optimized for performance
-
-Since, the functions are "standard library" functions, a dedicated group of developers constantly make them better. In the process, they are able to create the most efficient code optimized for maximum performance.
-
+   Since, the functions are "standard library" functions, a dedicated group of developers constantly make them better. In the process, they are able to create the most efficient code optimized for maximum performance.
 3. It saves considerable development time
-
-Since the general functions like printing to a screen, calculating the square root, and many more are already written. You shouldn't worry about creating them once again.
-
+   Since the general functions like printing to a screen, calculating the square root, and many more are already written. You shouldn't worry about creating them once again.
 4. The functions are portable
+   With ever-changing real-world needs, your application is expected to work every time, everywhere. And, these library functions help you in that they do the same thing on every computer.
 
-With ever-changing real-world needs, your application is expected to work every time, everywhere. And, these library functions help you in that they do the same thing on every computer.
-
-#### Example: Square root using sqrt() function
+Example: Square root using sqrt() function
 
 Suppose, you want to find the square root of a number.
 
 To can compute the square root of a number, you can use the `sqrt()` library function. The function is defined in the `math.h` header file.
 
-```
+```c
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -59,7 +52,7 @@ int main()
 
 When you run the program, the output will be:
 
-```
+```c
 Enter a number: 12
 Square root of 12.00 = 3.46
 ```
