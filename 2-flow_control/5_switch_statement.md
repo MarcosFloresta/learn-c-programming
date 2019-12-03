@@ -8,7 +8,7 @@ You can do the same thing with the `if...else..if` ladder. However, the syntax o
 
 ## Syntax of switch...case
 
-```
+```c
 switch (expression)
 ​{
     case constant1:
@@ -41,7 +41,8 @@ By the way, the `default` clause inside the `switch` statement is optional.
 ![Flowchart of switch statement](/images/flowchart-switch-statement.jpg)
 
 Example: Simple Calculator
-```
+
+```c
 // Program to create a simple calculator
 #include <stdio.h>
 int main() {
@@ -72,8 +73,10 @@ int main() {
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter an operator (+, -, *,): -
 Enter two operands: 32.5
 12.4
@@ -84,8 +87,8 @@ The `-` operator entered by the user is stored in the `operator` variable. And, 
 
 Since the `operator` is `-`, the control of the program jumps to
 
-```
+```c
 printf("%.1lf - %.1lf = %.1lf", n1, n2, n1-n2);
 ```
 
-Finally, the break statement terminates the `switch` statement
+Finally, the break statement terminates the `switch` statement.
