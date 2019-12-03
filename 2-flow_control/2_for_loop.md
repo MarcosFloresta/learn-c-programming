@@ -16,7 +16,7 @@ We will learn about `for` loop in this tutorial. In the next tutorial, we will l
 
 The syntax of the for loop is:
 
-```
+```c
 for (initializationStatement; testExpression; updateStatement)
 {
     // statements inside the body of loop
@@ -39,7 +39,8 @@ To learn more about test expression (when the test expression is evaluated to tr
 ![Flowchart of for loop in C programming](/images/c-for-loop.jpg)
 
 Example 1: for loop
-```
+
+```c
 // Print numbers from 1 to 10
 #include <stdio.h>
 int main() {
@@ -51,8 +52,10 @@ int main() {
   return 0;
 }
 ```
+
 Output
-```
+
+```c
 1 2 3 4 5 6 7 8 9 10
 ```
 
@@ -63,7 +66,8 @@ Output
 5. When `i` becomes 11, `i < 11` will be false, and the for loop terminates.
 
 Example 2: for loop
-```
+
+```c
 // Program to calculate the sum of first n natural numbers
 // Positive integers 1,2,3...n are known as natural numbers
 #include <stdio.h>
@@ -81,8 +85,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter a positive integer: 10
 Sum = 55
 ```
@@ -100,4 +106,3 @@ When the count is 11, the test expression is evaluated to 0 (false), and the loo
 Then, the value of `sum` is printed on the screen.
 
 We will learn about while loop and `do...while` loop in the next tutorial.
-
