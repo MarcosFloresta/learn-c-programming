@@ -34,7 +34,7 @@ You can also create functions as per your need. Such functions created by the us
 
 ## How user-defined function works?
 
-```
+```c
 #include <stdio.h>
 void functionName()
 {
@@ -48,7 +48,7 @@ int main()
     ... .. ...
 
     functionName();
-    
+
     ... .. ...
     ... .. ...
 }
@@ -58,7 +58,7 @@ The execution of a C program begins from the `main()` function.
 
 When the compiler encounters `functionName();`, control of the program jumps to
 
-```
+```c
 void functionName()
 ```
 
