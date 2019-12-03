@@ -4,7 +4,7 @@ In this tutorial, you'll learn about strings in C programming. You'll learn to d
 
 In C programming, a string is a sequence of characters terminated with a null character `\0`. For example:
 
-```
+```c
 char c[] = "c string";
 ```
 
@@ -16,7 +16,7 @@ When the compiler encounters a sequence of characters enclosed in the double quo
 
 Here's how you can declare strings:
 
-```
+```c
 char s[5];
 ```
 
@@ -28,7 +28,7 @@ Here, we have declared a string of 5 characters.
 
 You can initialize strings in a number of ways.
 
-```
+```c
 char c[] = "abcd";
 char c[50] = "abcd";
 char c[] = {'a', 'b', 'c', 'd', '\0'};
@@ -39,7 +39,7 @@ char c[5] = {'a', 'b', 'c', 'd', '\0'};
 
 Let's take another example:
 
-```
+```c
 char c[5] = "abcde";
 ```
 
@@ -52,7 +52,8 @@ You can use the `scanf()` function to read a string.
 The `scanf()` function reads the sequence of characters until it encounters whitespace (space, newline, tab etc.).
 
 Example 1: scanf() to read a string
-```
+
+```c
 #include <stdio.h>
 int main()
 {
@@ -63,8 +64,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter name: Dennis Ritchie
 Your name is Dennis.
 ```
@@ -76,7 +79,8 @@ Even though `Dennis Ritchie` was entered in the above program, only `"Ritchie"` 
 You can use the `fgets()` function to read a line of string. And, you can use `puts()` to display the string.
 
 Example 2: fgets() and puts()
-```
+
+```c
 #include <stdio.h>
 int main()
 {
@@ -88,8 +92,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter name: Tom Hanks
 Name: Tom Hanks
 ```
@@ -111,15 +117,16 @@ It's because `gets()` allows you to input any length of characters. Hence, there
 Strings can be passed to a function in a similar way as arrays. Learn more about passing arrays to a function.
 
 Example 3: Passing string to a Function
-```
+
+```c
 #include <stdio.h>
 void displayString(char str[]);
 int main()
 {
     char str[50];
     printf("Enter string: ");
-    fgets(str, sizeof(str), stdin);             
-    displayString(str);     // Passing string to a function.    
+    fgets(str, sizeof(str), stdin);
+    displayString(str);     // Passing string to a function.
     return 0;
 }
 void displayString(char str[])
@@ -134,7 +141,8 @@ void displayString(char str[])
 Similar like arrays, string names are "decayed" to pointers. Hence, you can use pointers to manipulate elements of the string. We recommended you to check C Arrays and Pointers before you check this example.
 
 Example 4: Strings and Pointers
-```
+
+```c
 #include <stdio.h>
 int main(void) {
   char name[] = "Harry Potter";
@@ -155,3 +163,4 @@ int main(void) {
 * **strcpy()** - copies a string to another
 * **strcmp()** - compares two strings
 * **strcat()** - concatenates two strings
+* 
