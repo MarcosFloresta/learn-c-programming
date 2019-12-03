@@ -7,7 +7,8 @@ In C programming, it is also possible to pass addresses as arguments to function
 To accept these addresses in the function definition, we can use pointers. It's because pointers are used to store addresses. Let's take an example:
 
 Example: Call by reference
-```
+
+```c
 #include <stdio.h>
 void swap(int *n1, int *n2);
 int main()
@@ -30,7 +31,7 @@ void swap(int* n1, int* n2)
 
 When you run the program, the output will be:
 
-```
+```c
 num1 = 10
 num2 = 5
 ```
@@ -39,7 +40,7 @@ The address of `num1` and `num2` are passed to the `swap()` function using `swap
 
 Pointers `n1` and `n2` accept these arguments in the function definition.
 
-```
+```c
 void swap(int* n1, int* n2) {
     ... ..
 }
@@ -54,7 +55,8 @@ Notice that, `swap()` is not returning anything; its return type is `void`.
 This technique is known as call by reference in C programming.
 
 Example 2: Passing Pointers to Functions
-```
+
+```c
 #include <stdio.h>
 void addOne(int* ptr) {
   (*ptr)++; // adding 1 to *ptr
