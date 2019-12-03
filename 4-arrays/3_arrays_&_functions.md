@@ -9,7 +9,8 @@ In C programming, you can pass en entire array to functions. Before we learn tha
 Passing array elements to a function is similar to passing variables to a function.
 
 Example 1: Passing an array
-```
+
+```c
 #include <stdio.h>
 void display(int age1, int age2)
 {
@@ -20,50 +21,55 @@ int main()
 {
     int ageArray[] = {2, 8, 4, 12};
     // Passing second and third elements to display()
-    display(ageArray[1], ageArray[2]); 
+    display(ageArray[1], ageArray[2]);
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 8
 4
 ```
 
 Example 2: Passing arrays to functions
-```
-// Program to calculate the sum of array elements by passing to a function 
+
+```c
+// Program to calculate the sum of array elements by passing to a function
 #include <stdio.h>
 float calculateSum(float age[]);
 int main() {
     float result, age[] = {23.4, 55, 22.6, 3, 40.5, 18};
     // age array is passed to calculateSum()
-    result = calculateSum(age); 
+    result = calculateSum(age);
     printf("Result = %.2f", result);
     return 0;
 }
 float calculateSum(float age[]) {
   float sum = 0.0;
   for (int i = 0; i < 6; ++i) {
-		sum += age[i];
+    sum += age[i];
   }
   return sum;
 }
 ```
+
 Output
-```
+
+```c
 Result = 162.50
 ```
 
 To pass an entire array to a function, only the name of the array is passed as an argument.
 
-```
+```c
 result =  calculateSum(age);
 ```
 
 However, notice the use of `[]` in the function definition.
 
-```
+```c
 float calculateSum(float age[]) {
 ... ..
 }
@@ -76,7 +82,8 @@ This informs the compiler that you are passing a one-dimensional array to the fu
 To pass multidimensional arrays to a function, only the name of the array is passed to the function(similar to one-dimensional arrays).
 
 Example 3: Passing two-dimensional arrays
-```
+
+```c
 #include <stdio.h>
 void displayNumbers(int num[2][2]);
 int main()
@@ -100,8 +107,10 @@ void displayNumbers(int num[2][2])
     }
 }
 ```
+
 Output
-```
+
+```c
 Enter 4 numbers:
 2
 3
@@ -114,4 +123,4 @@ Displaying:
 5
 ```
 
-**Note:** In C programming, you can pass arrays to functions, however, you cannot return arrays from functions
+**Note:** In C programming, you can pass arrays to functions, however, you cannot return arrays from functions.
