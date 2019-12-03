@@ -6,8 +6,8 @@ In this tutorial, you will learn about if statement (including if...else and nes
 
 The syntax of the `if` statement in C programming is:
 
-```
-if (test expression) 
+```c
+if (test expression)
 {
    // statements to be executed if the test expression is true
 }
@@ -24,8 +24,9 @@ The `if` statement evaluates the test expression inside the parenthesis `()`.
 
 To learn more about when test expression is evaluated to true (non-zero value) and false (0), check relational and logical operators.
 
-```
 Example 1: if statement
+
+```c
 // Program to display a number if it is negative
 #include <stdio.h>
 int main() {
@@ -40,26 +41,30 @@ int main() {
     return 0;
 }
 ```
+
 Output 1
-```
+
+```c
 Enter an integer: -2
 You entered -2.
 The if statement is easy.
 When the user enters -2, the test expression number<0 is evaluated to true. Hence, You entered -2 is displayed on the screen.
 ```
+
 Output 2
-```
+
+```c
 Enter an integer: 5
 The if statement is easy.
 ```
 
 When the user enters 5, the test expression `number<0` is evaluated to false and the statement inside the body of `if` is not executed
 
-## C if...else Statement
+## C if...else
 
 The `if` statement may have an optional `else` block. The syntax of the `if..else` statement is:
 
-```
+```c
 if (test expression) {
     // statements to be executed if the test expression is true
 }
@@ -83,7 +88,8 @@ If the test expression is evaluated to false,
 ![How if...else statement works in C programming?](/images/how-if-else-works-c-programming.jpg)
 
 Example 2: if...else statement
-```
+
+```c
 // Check whether an integer is odd or even
 #include <stdio.h>
 int main() {
@@ -100,8 +106,10 @@ int main() {
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter an integer: 7
 7 is an odd integer.
 ```
@@ -114,9 +122,9 @@ The `if...else` statement executes two different codes depending upon whether th
 
 The if...else ladder allows you to check between multiple test expressions and execute different statements.
 
-### Syntax of nested if...else statement.
+### Syntax of nested if...else statement
 
-```
+```c
 if (test expression1) {
    // statement(s)
 }
@@ -134,7 +142,8 @@ else {
 ```
 
 Example 3: C if...else Ladder
-```
+
+```c
 // Program to relate two integers using =, > or < symbol
 #include <stdio.h>
 int main() {
@@ -156,8 +165,10 @@ int main() {
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter two integers: 12
 23
 Result: 12 < 23
@@ -169,8 +180,9 @@ It is possible to include an `if...else` statement inside the body of another `i
 
 Example 4: Nested if...else
 
-This program given below relates two integers using either `<`, `>` and `=` similar to the `if...else` ladder's example. However, we will use a nested ``if...else` statement to solve this problem.
-```
+This program given below relates two integers using either `<`, `>` and `=` similar to the `if...else` ladder's example. xHowever, we will use a nested ``if...else` statement to solve this problem.
+
+```c
 #include <stdio.h>
 int main() {
     int number1, number2;
@@ -190,18 +202,21 @@ int main() {
     return 0;
 }
 ```
+
 If the body of an `if...else` statement has only one statement, you do not need to use brackets `{}`.
 
 For example, this code
 
-```
+```c
 if (a > b) {
     print("Hello");
 }
 print("Hi");
 ```
+
 is equivalent to
-```
+
+```c
 if (a > b)
     print("Hello");
 print("Hi");
