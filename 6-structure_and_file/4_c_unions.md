@@ -8,7 +8,7 @@ A union is a user-defined type similar to structs in C programming. We recommend
 
 We use the `union` keyword to define unions. Here's an example:
 
-```
+```c
 union car
 {
   char name[50];
@@ -24,7 +24,7 @@ When a union is defined, it creates a user-defined type. However, no memory is a
 
 Here's how we create union variables.
 
-```
+```c
 union car
 {
   char name[50];
@@ -39,7 +39,7 @@ int main()
 
 Another way of creating union variables is:
 
-```
+```c
 union car
 {
   char name[50];
@@ -62,7 +62,7 @@ In the above example,
 
 Let's take an example to demonstrate the difference between unions and structures:
 
-```
+```c
 #include <stdio.h>
 union unionJob
 {
@@ -84,13 +84,15 @@ int main()
    return 0;
 }
 ```
+
 Output
-```
+
+```c
 size of union = 32
 size of structure = 40
 ```
 
-##### Why this difference in the size of union and structure variables?
+Why this difference in the size of union and structure variables?
 
 Here, the size of `sJob` is 40 bytes because
 
@@ -100,11 +102,11 @@ Here, the size of `sJob` is 40 bytes because
   
 However, the size of `uJob` is 32 bytes. It's because the size of a union variable will always be the size of its largest element. In the above example, the size of its largest element, (`name[32]`), is 32 bytes.
 
-## Only one union member can be accessed at a time 
+## Only one union member can be accessed at a time
 
 You can access all members of a structure at once as sufficient memory is allocated for all members. However, it's not the case in unions. You can only access a single member of a union at one time. Let's see an example.
 
-```
+```c
 #include <stdio.h>
 union Job
 {
@@ -120,8 +122,10 @@ int main()
    return 0;
 }
 ```
+
 Output
-```
+
+```c
 Salary = 0.0
 Number of workers = 100
 ```
