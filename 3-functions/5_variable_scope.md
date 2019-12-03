@@ -19,7 +19,7 @@ The variables declared inside a block are automatic or local variables. The loca
 
 Let's take an example.
 
-```
+```c
 #include <stdio.h>
 int main(void) {
   
@@ -37,7 +37,7 @@ When you run the above program, you will get an error undeclared identifier i. I
 
 Let's take another example.
 
-```
+```c
 int main() {
     int n1; // n1 is a local variable to main()
 }
@@ -50,29 +50,32 @@ In the above example, `n1` is local to `main()` and `n2` is local to `func()`.
 
 This means you cannot access the `n1` variable inside `func()` as it only exists inside `main()`. Similarly, you cannot access the `n2` variable inside `main()` as it only exists inside `func()`.
 
-##  Global Variable
+## Global Variable
 
 Variables that are declared outside of all functions are known as external or global variables. They are accessible from any function inside the program.
 
 Example 1: Global Variable
-```
+
+```c
 #include <stdio.h>
 void display();
 int n = 5;  // global variable
 int main()
 {
-    ++n;     
+    ++n;
     display();
     return 0;
 }
 void display()
 {
-    ++n;   
+    ++n;
     printf("n = %d", n);
 }
 ```
+
 Output
-```
+
+```c
 n = 7
 ```
 
@@ -90,14 +93,15 @@ Unless you are working on embedded systems where you know how to optimize code f
 
 A static variable is declared by using the static keyword. For example;
 
-```
+```c
 static int i;
 ```
 
 The value of a static variable persists until the end of the program.
 
 Example 2: Static Variable
-```
+
+```c
 #include <stdio.h>
 void display();
 int main()
@@ -112,8 +116,10 @@ void display()
     printf("%d  ",c);
 }
 ```
+
 Output
-```
+
+```c
 6 11
 ```
 
