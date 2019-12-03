@@ -6,7 +6,7 @@ A function that calls itself is known as a recursive function. And, this techniq
 
 ## How recursion works?
 
-```
+```c
 void recurse()
 {
     ... .. ...
@@ -29,7 +29,8 @@ The recursion continues until some condition is met to prevent it.
 To prevent infinite recursion, if...else statement (or similar approach) can be used where one branch makes the recursive call, and other doesn't.
 
 Example: Sum of Natural Numbers Using Recursion
-```
+
+```c
 #include <stdio.h>
 int sum(int n);
 int main() {
@@ -43,13 +44,15 @@ int main() {
 int sum(int n) {
     if (n != 0)
         // sum() function calls itself
-        return n + sum(n-1); 
+        return n + sum(n-1);
     else
         return n;
 }
 ```
+
 Output
-```
+
+```c
 Enter a positive integer:3
 sum = 6
 ```
