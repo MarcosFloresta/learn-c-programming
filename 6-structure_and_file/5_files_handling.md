@@ -17,7 +17,7 @@ When dealing with files, there are two types of files you should know about:
 
 1. Text files
 2. Binary files
-   
+
 ### 1. Text files
 
 Text files are the normal **.txt** files. You can easily create text files using any simple text editors such as Notepad.
@@ -47,7 +47,7 @@ In C, you can perform four major operations on files, either text or binary:
 
 When working with files, you need to declare a pointer of type file. This declaration is needed for communication between the file and the program.
 
-```
+```c
 FILE *fptr;
 ```
 
@@ -57,13 +57,13 @@ Opening a file is performed using the `fopen()` function defined in the `stdio.h
 
 The syntax for opening a file in standard I/O is:
 
-```
+```c
 ptr = fopen("fileopen","mode");
 ```
 
 For example,
 
-```
+```c
 fopen("E:\\cprogram\\newprogram.txt","w");
 fopen("E:\\cprogram\\oldprogram.bin","rb");
 ```
@@ -94,7 +94,7 @@ The file (both text and binary) should be closed after reading/writing.
 
 Closing a file is performed using the `fclose()` function.
 
-```
+```c
 fclose(fptr);
 ```
 
@@ -106,9 +106,9 @@ For reading and writing to a text file, we use the functions `fprintf()` and `fs
 
 They are just the file versions of `printf()` and `scanf()`. The only difference is that `fprint()` and `fscanf()` expects a pointer to the structure FILE.
 
+Example 1: Write to a text file
 
-#### Example 1: Write to a text file
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 int main()
@@ -119,8 +119,8 @@ int main()
    fptr = fopen("C:\\program.txt","w");
    if(fptr == NULL)
    {
-      printf("Error!");   
-      exit(1);             
+      printf("Error!");
+      exit(1);
    }
    printf("Enter num: ");
    scanf("%d",&num);
@@ -134,9 +134,9 @@ This program takes a number from the user and stores in the file `program.txt`.
 
 After you compile and run this program, you can see a text file program.txt created in C drive of your computer. When you open the file, you can see the integer you entered.
 
+Example 2: Read from a text file
 
-#### Example 2: Read from a text file
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 int main()
@@ -150,7 +150,7 @@ int main()
    }
    fscanf(fptr,"%d", &num);
    printf("Value of n=%d", num);
-   fclose(fptr); 
+   fclose(fptr);
   
    return 0;
 }
@@ -175,12 +175,13 @@ To write into a binary file, you need to use the `fwrite()` function. The functi
 3. number of such type of data
 4. pointer to the file where you want to write.
 
-```
+```c
 fwrite(addressData, sizeData, numbersData, pointerToFile);
 ```
 
-#### Example 3: Write to a binary file using fwrite()
-```
+Example 3: Write to a binary file using fwrite()
+
+```c
 #include <stdio.h>
 #include <stdlib.h>
 struct threeNum
@@ -202,9 +203,9 @@ int main()
       num.n1 = n;
       num.n2 = 5*n;
       num.n3 = 5*n + 1;
-      fwrite(&num, sizeof(struct threeNum), 1, fptr); 
+      fwrite(&num, sizeof(struct threeNum), 1, fptr);
    }
-   fclose(fptr); 
+   fclose(fptr);
   
    return 0;
 }
@@ -226,12 +227,13 @@ Finally, we close the file.
 
 Function `fread()` also take 4 arguments similar to the `fwrite()` function as above.
 
-```
+```c
 fread(addressData, sizeData, numbersData, pointerToFile);
 ```
 
-#### Example 4: Read from a binary file using fread()
-```
+Example 4: Read from a binary file using fread()
+
+```c
 #include <stdio.h>
 #include <stdlib.h>
 struct threeNum
@@ -250,10 +252,10 @@ int main()
    }
    for(n = 1; n < 5; ++n)
    {
-      fread(&num, sizeof(struct threeNum), 1, fptr); 
+      fread(&num, sizeof(struct threeNum), 1, fptr);
       printf("n1: %d\tn2: %d\tn3: %d", num.n1, num.n2, num.n3);
    }
-   fclose(fptr); 
+   fclose(fptr);
   
    return 0;
 }
@@ -275,7 +277,7 @@ As the name suggests, `fseek()` seeks the cursor to the given record in the file
 
 ### Syntax of fseek()
 
-```
+```c
 fseek(FILE * stream, long int offset, int whence);
 ```
 
@@ -288,8 +290,9 @@ Different whence in fseek()
 | `SEEK_END` | Starts the offset from the end of the file. |
 | `SEEK_CUR` |Starts the offset from the current location of the cursor in the file. |
 
-#### Example 5: fseek()
-```
+Example 5: fseek()
+
+```c
 #include <stdio.h>
 #include <stdlib.h>
 struct threeNum
@@ -306,16 +309,16 @@ int main()
        // Program exits if the file pointer returns NULL.
        exit(1);
    }
-   
+
    // Moves the cursor to the end of the file
    fseek(fptr, -sizeof(struct threeNum), SEEK_END);
    for(n = 1; n < 5; ++n)
    {
-      fread(&num, sizeof(struct threeNum), 1, fptr); 
+      fread(&num, sizeof(struct threeNum), 1, fptr);
       printf("n1: %d\tn2: %d\tn3: %d\n", num.n1, num.n2, num.n3);
       fseek(fptr, -2*sizeof(struct threeNum), SEEK_CUR);
    }
-   fclose(fptr); 
+   fclose(fptr);
   
    return 0;
 }
