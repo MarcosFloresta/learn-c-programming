@@ -7,11 +7,11 @@ Before you learn about the relationship between arrays and pointers, be sure to 
 * C Arrays
 * C Pointers
   
-## Relationship Between Arrays and Pointers
+## Relationship Between Arrays and Pointers in C
 
 An array is a block of sequential data. Let's write a program to print addresses of array elements.
 
-```
+```c
 #include <stdio.h>
 int main() {
    int x[4];
@@ -23,8 +23,10 @@ int main() {
    return 0;
 }
 ```
+
 Output
-```
+
+```c
 &x[0] = 1450734448
 &x[1] = 1450734452
 &x[2] = 1450734456
@@ -46,10 +48,10 @@ Similarly,
 * `&x[2]` is equivalent to x+2 and x[2] is equivalent to *(x+2).
 * ...
 * Basically, &x[i] is equivalent to x+i and x[i] is equivalent to *(x+i).
-  
 
 Example 1: Pointers and Arrays
-```
+
+```c
 #include <stdio.h>
 int main() {
   int i, x[6], sum = 0;
@@ -67,14 +69,14 @@ int main() {
 
 When you run the program, the output will be:
 
-```
+```c
 Enter 6 numbers:  2
  3
  4
  4
  12
  4
-Sum = 29 
+Sum = 29
 ```
 
 Here, we have declared an array `x` of 6 elements. To access elements of the array, we have used pointers.
@@ -84,23 +86,26 @@ In most contexts, array names decay to pointers. In simple words, array names ar
 There are a few cases where array names don't decay to pointers. To learn more, visit: When does array name doesn't decay into a pointer?
 
 Example 2: Arrays and Pointers
-```
+
+```c
 #include <stdio.h>
 int main() {
   int x[5] = {1, 2, 3, 4, 5};
   int* ptr;
   // ptr is assigned the address of the third element
-  ptr = &x[2]; 
+  ptr = &x[2];
   printf("*ptr = %d \n", *ptr);   // 3
   printf("*(ptr+1) = %d \n", *(ptr+1)); // 4
   printf("*(ptr-1) = %d", *(ptr-1));  // 2
   return 0;
 }
 ```
+
 When you run the program, the output will be:
-```
-*ptr = 3 
-*(ptr+1) = 4 
+
+```c
+*ptr = 3
+*(ptr+1) = 4
 *(ptr-1) = 2
 ```
 
