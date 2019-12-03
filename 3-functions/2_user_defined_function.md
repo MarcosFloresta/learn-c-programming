@@ -15,7 +15,7 @@ Suppose, you need to create a circle and color it depending upon the radius and 
 
 Here is an example to add two integers. To perform this task, we have created an user-defined `addNumbers()`.
 
-```
+```c
 #include <stdio.h>
 int addNumbers(int a, int b);         // function prototype
 int main()
@@ -27,7 +27,7 @@ int main()
     printf("sum = %d",sum);
     return 0;
 }
-int addNumbers(int a, int b)         // function definition   
+int addNumbers(int a, int b)         // function definition
 {
     int result;
     result = a+b;
@@ -43,7 +43,7 @@ A function prototype gives information to the compiler that the function may lat
 
 ### Syntax of function prototype
 
-```
+```c
 returnType functionName(type1 argument1, type2 argument2, ...);
 ```
 
@@ -61,7 +61,7 @@ Control of the program is transferred to the user-defined function by calling it
 
 ### Syntax of function call
 
-```
+```c
 functionName(argument1, argument2, ...);
 ```
 
@@ -73,7 +73,7 @@ Function definition contains the block of code to perform a specific task. In ou
 
 ### Syntax of function definition
 
-```
+```c
 returnType functionName(type1 argument1, type2 argument2, ...)
 {
     //body of the function
@@ -106,13 +106,13 @@ In the above example, the value of the `result` variable is returned to the main
 
 ### Syntax of return statement
 
-```
-return (expression);     
+```c
+return (expression);
 ```
 
 For example,
 
-```
+```c
 return a;
 return (a+b);
 ```
