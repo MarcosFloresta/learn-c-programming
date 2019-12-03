@@ -8,11 +8,10 @@ In C programming, a struct (or structure) is a collection of variables (can be o
 
 Before you can create structure variables, you need to define its data type. To define a struct, the `struct` keyword is used.
 
-
 ### Syntax of struct
 
-```
-struct structureName 
+```c
+struct structureName
 {
     dataType member1;
     dataType member2;
@@ -22,7 +21,7 @@ struct structureName
 
 Here is an example:
 
-```
+```c
 struct Person
 {
     char name[50];
@@ -39,7 +38,7 @@ When a struct type is declared, no storage or memory is allocated. To allocate m
 
 Here's how we create structure variables:
 
-```
+```c
 struct Person
 {
     char name[50];
@@ -56,7 +55,7 @@ int main()
 
 Another way of creating a struct variable is:
 
-```
+```c
 struct Person
 {
     char name[50];
@@ -73,15 +72,16 @@ There are two types of operators used for accessing members of a structure.
 
 1. `.` - Member operator
 2. `->` - Structure pointer operator (will be discussed in the next tutorial)
-   
+
 Suppose, you want to access the `salary` of `person2`. Here's how you can do it.
 
-```
+```c
 person2.salary
 ```
 
 Example: Add two distances
-```
+
+```c
 // Program to add two distances (feet-inch)
 #include <stdio.h>
 struct Distance
@@ -106,7 +106,7 @@ int main()
     // adding inches
     sum.inch = dist1.inch + dist2.inch;
     // changing to feet if inch is greater than 12
-    while (sum.inch >= 12) 
+    while (sum.inch >= 12)
     {
         ++sum.feet;
         sum.inch = sum.inch - 12;
@@ -115,8 +115,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 1st distance
 Enter feet: 12
 Enter inch: 7.9
@@ -130,9 +132,9 @@ Sum of distances = 15'-5.7"
 
 We use the `typedef` keyword to create an alias name for data types. It is commonly used with structures to simplify the syntax of declaring variables.
 
-#### This code
+This code
 
-```
+```c
 struct Distance{
     int feet;
     float inch;
@@ -143,9 +145,9 @@ int main() {
 }
 ```
 
-#### is equivalent to
+is equivalent to
 
-```
+```c
 typedef struct Distance{
     int feet;
     float inch;
@@ -160,7 +162,7 @@ int main() {
 
 You can create structures within a structure in C programming. For example,
 
-```
+```c
 struct complex
 {
  int imag;
@@ -176,7 +178,7 @@ struct number
 
 Suppose, you want to set `imag` of `num2` variable to 11. Here's how you can do it:
 
-```
+```c
 num2.comp.imag = 11;
 ```
 
