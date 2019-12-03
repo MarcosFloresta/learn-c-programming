@@ -11,7 +11,7 @@ Before you learn about how pointers can be used with structs, be sure to check t
 
 Here's how you can create pointers to structs.
 
-```
+```c
 struct name {
     member1;
     member2;
@@ -26,11 +26,11 @@ int main()
 
 Here, `ptr` is a pointer to `struct`.
 
-#### Example: Access members using Pointer
+Example: Access members using Pointer
 
 To access members of a structure using pointers, we use the `->` operator.
 
-```
+```c
 #include <stdio.h>
 struct person
 {
@@ -40,7 +40,7 @@ struct person
 int main()
 {
     struct person *personPtr, person1;
-    personPtr = &person1;   
+    personPtr = &person1;
     printf("Enter age: ");
     scanf("%d", &personPtr->age);
     printf("Enter weight: ");
@@ -67,8 +67,9 @@ Before you proceed this section, we recommend you to check C dynamic memory allo
 
 Sometimes, the number of struct variables you declared may be insufficient. You may need to allocate memory during run-time. Here's how you can achieve this in C programming.
 
-#### Example: Dynamic memory allocation of structs
-```
+Example: Dynamic memory allocation of structs
+
+```c
 #include <stdio.h>
 #include <stdlib.h>
 struct person {
@@ -102,20 +103,20 @@ int main()
 
 When you run the program, the output will be:
 
-```
+```c
 Enter the number of persons:  2
 Enter first name and age respectively:  Harry 24
 Enter first name and age respectively:  Gary 32
 Displaying Information:
-Name: Harry	Age: 24
-Name: Gary	Age: 32
+Name: Harry Age: 24
+Name: Gary Age: 32
 ```
 
 In the above example, `n` number of struct variables are created where `n` is entered by the user.
 
 To allocate the memory for `n` number of `struct person`, we used,
 
-```
+```c
 ptr = (struct person*) malloc(n * sizeof(struct person));
 ```
 
