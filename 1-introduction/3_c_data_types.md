@@ -4,7 +4,7 @@ In this tutorial, you will learn about basic data types such as int, float, char
 
 In C programming, data types are declarations for variables. This determines the type and size of data associated with variables. For example,
 
-```
+```c
 int myVar;
 ```
 
@@ -14,14 +14,13 @@ Here, `myVar` is a variable of `int` (integer) type. The size of `int` is 4 byte
 
 Here's a table containing commonly used types in C programming for quick access.
 
-
-| Type	   | Size (bytes)	| Format Specifier |
+| Type | Size (bytes) | Format Specifier |
 | ------- | ------- | -------|
 | int | at least 2, usually 4 | %d |
 | char | 1 | %c |
 | float | 4 | %f |
 | double | 8 | %lf |
-| short int | 2 usually	| %hd |
+| short int | 2 usually | %hd |
 | unsigned int | at least 2, usually 4 | %u |
 | long int | at least 4, usually 8 | %li |
 | long long int | at least 8 | %lli |
@@ -37,7 +36,7 @@ Integers are whole numbers that can have both zero, positive and negative values
 
 We can use `int` for declaring an integer variable.
 
-```
+```c
 int id;
 ```
 
@@ -45,7 +44,7 @@ Here, `id` is a variable of type integer.
 
 You can declare multiple variables at once in C programming. For example,
 
-```
+```c
 int id, age;
 ```
 
@@ -55,14 +54,14 @@ The size of `int` is usually 4 bytes (32 bits). And, it can take `2^32` distinct
 
 `float` and `double` are used to hold real numbers.
 
-```
+```c
 float salary;
 double price;
 ```
 
 In C, floating-point numbers can also be represented in exponential. For example,
 
-```
+```c
 float normalizationFactor = 22.442e2;
 ```
 
@@ -74,7 +73,7 @@ The size of `float` (single precision float data type) is 4 bytes. And the size 
 
 Keyword `char` is used for declaring character type variables. For example,
 
-```
+```c
 char test = 'h';
 ```
 
@@ -89,10 +88,10 @@ For example, if a function is not returning anything, its return type should be 
 Note that, you cannot create variables of `void` type.
 
 ## short and long
-`
+
 If you need to use a large number, you can use a type specifier `long`. Here's how:
 
-```
+```c
 long a;
 long long b;
 long double c;
@@ -102,14 +101,14 @@ Here variables `a` and `b` can store integer values. And, `c` can store a floati
 
 If you are sure, only a small integer (`[−32,767, +32,767]` range) will be used, you can use `short`.
 
-```
+```c
 short d;
 ```
 
 You can always check the size of a variable using the sizeof() operator.
 
-```
-#include <stdio.h>      
+```c
+#include <stdio.h>
 int main() {
   short a;
   long b;
@@ -127,7 +126,7 @@ int main() {
 
 In C, `signed` and `unsigned` are type modifiers. You can alter the data storage of a data type by using them. For example,
 
-```
+```c
 unsigned int x;
 int y;
 ```
@@ -136,13 +135,12 @@ Here, the variable `x` can hold only zero and positive values because we have us
 
 Considering the size of `int` is 4 bytes, variable `y` can hold values from `-2^31` to `2^31 -1`, whereas variable `x` can hold values from `0` to `2^32 -1`.
 
-## Other data types defined in C programming are:
+## Other data types defined in C programming are
 
 * bool Type
 * Enumerated type
 * Complex types
 
-***
 ## Derived Data Types
 
 Data types that are derived from fundamental data types are derived types. For example: arrays, pointers, function types, structures, etc.
