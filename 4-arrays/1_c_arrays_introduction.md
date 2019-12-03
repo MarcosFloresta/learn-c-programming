@@ -6,19 +6,19 @@ In this tutorial, you will learn to work with arrays. You will learn to declare,
 
 An array is a variable that can store multiple values. For example, if you want to store 100 integers, you can create an array for it.
 
-```
-int data[100]; 
+```c
+int data[100];
 ```
 
 ## How to declare an array?
 
-```
+```c
 dataType arrayName[arraySize];
 ```
 
 For example,
 
-```
+```c
 float mark[5];
 ```
 
@@ -46,13 +46,13 @@ This is because the size of a float is 4 bytes.
 
 It is possible to initialize an array during declaration. For example,
 
-```
+```c
 int mark[5] = {19, 10, 8, 17, 9};
 ```
 
 You can also initialize an array like this.
 
-```
+```c
 int mark[] = {19, 10, 8, 17, 9};
 ```
 
@@ -62,7 +62,7 @@ Here, we haven't specified the size. However, the compiler knows its size is 5 a
 
 Here,
 
-```
+```c
 mark[0] is equal to 19
 mark[1] is equal to 10
 mark[2] is equal to 8
@@ -72,7 +72,7 @@ mark[4] is equal to 9
 
 ## Change Value of Array elements
 
-```
+```c
 int mark[5] = {19, 10, 8, 17, 9}
 // make the value of the third element to -1
 mark[2] = -1;
@@ -84,7 +84,7 @@ mark[4] = 0;
 
 Here's how you can take input from the user and store it in an array element.
 
-```
+```c
 // take input and store it in the 3rd element
 ​scanf("%d", &mark[2]);
 // take input and store it in the ith element
@@ -93,7 +93,7 @@ scanf("%d", &mark[i-1]);
 
 Here's how you can print an individual element of an array.
 
-```
+```c
 // print the first element of the array
 printf("%d", mark[0]);
 // print the third element of the array
@@ -103,7 +103,8 @@ printf("%d", mark[i-1]);
 ```
 
 Example 1: Array Input/Output
-```
+
+```c
 // Program to take 5 values from the user and store them in an array
 // Print the elements stored in the array
 #include <stdio.h>
@@ -122,8 +123,10 @@ int main() {
   return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter 5 integers: 1
 -3
 34
@@ -139,7 +142,8 @@ Displaying integers: 1
 Here, we have used a `for` loop to take 5 inputs from the user and store them in an array. Then, using another `for` loop, these elements are displayed on the screen.
 
 Example 2: Calculate Average
-```
+
+```c
 // Program to find the average of n numbers using arrays
 #include <stdio.h>
 int main()
@@ -151,7 +155,7 @@ int main()
      {
           printf("Enter number%d: ",i+1);
           scanf("%d", &marks[i]);
-          
+
           // adding integers entered by the user to the sum variable
           sum += marks[i];
      }
@@ -160,8 +164,10 @@ int main()
      return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter n: 5
 Enter number1: 45
 Enter number2: 35
@@ -177,7 +183,7 @@ Here, we have computed the average of `n` numbers entered by the user.
 
 Suppose you declared an array of 10 elements. Let's say,
 
-```
+```c
 int testArray[10];
 ```
 
