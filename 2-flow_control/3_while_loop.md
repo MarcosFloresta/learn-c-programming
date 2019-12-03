@@ -16,10 +16,10 @@ In the previous tutorial, we learned about `for` loop. In this tutorial, we will
 
 The syntax of the while loop is:
 
-```
-while (testExpression) 
+```c
+while (testExpression)
 {
-    // statements inside the body of the loop 
+    // statements inside the body of the loop
 }
 ```
 
@@ -37,13 +37,13 @@ To learn more about test expression (when the test expression is evaluated to tr
 ![flowchart of while loop in C programming](/images/c-while-loop_0.jpg)
 
 Example 1: while loop
-```
+
+```cc
 // Print numbers from 1 to 5
 #include <stdio.h>
 int main()
 {
     int i = 1;
-    
     while (i <= 5)
     {
         printf("%d\n", i);
@@ -52,8 +52,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 1
 2
 3
@@ -73,7 +75,7 @@ The `do..while` loop is similar to the `while` loop with one important differenc
 
 The syntax of the `do...while` loop is:
 
-```
+```c
 do
 {
    // statements inside the body of the loop
@@ -93,7 +95,8 @@ while (testExpression);
 ![do while loop flowchart in C programming](/images/c-do-while-loop_0.jpg)
 
 Example 2: do...while loop
-```
+
+```c
 // Program to add numbers until the user enters zero
 #include <stdio.h>
 int main()
@@ -111,8 +114,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter a number: 1.5
 Enter a number: 2.4
 Enter a number: -3.4
