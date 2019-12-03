@@ -12,16 +12,16 @@ Few commonly used string handling functions are discussed below:
 
 | Function | Work of Function |
 | --- | --- |
-| strlen()	| computes string's length |
-| strcpy()	| copies a string to another| 
-| strcat()	| concatenates(joins) two strings |
-| strcmp()	| compares two strings |
-| strlwr()	| converts string to lowercase |
-| strupr()	| converts string to uppercase |
+| strlen() | computes string's length |
+| strcpy() | copies a string to another |
+| strcat() | concatenates(joins) two strings |
+| strcmp() | compares two strings |
+| strlwr() | converts string to lowercase |
+| strupr() | converts string to uppercase |
 
 Strings handling functions are defined under `"string.h"` header file.
 
-```
+```c
 #include <string.h>
 ```
 
@@ -31,7 +31,7 @@ Strings handling functions are defined under `"string.h"` header file.
 
 Functions gets() and puts() are two string functions to take string input from the user and display it respectively as mentioned in the previous chapter.
 
-```
+```c
 #include<stdio.h>
 int main()
 {
