@@ -4,7 +4,7 @@ In this tutorial, you will learn to work with multidimensional arrays (two-dimen
 
 In C programming, you can create an array of arrays. These arrays are known as multidimensional arrays. For example,
 
-```
+```c
 float x[3][4];
 ```
 
@@ -14,7 +14,7 @@ Here, `x` is a two-dimensional (2d) array. The array can hold 12 elements. You c
 
 Similarly, you can declare a three-dimensional (3d) array. For example,
 
-```
+```c
 float y[2][4][3];
 ```
 
@@ -26,12 +26,12 @@ Here is how you can initialize two-dimensional and three-dimensional arrays:
 
 ### Initialization of a 2d array
 
-```
+```c
 // Different ways to initialize two-dimensional array
 int c[2][3] = {{1, 3, 0}, {-1, 5, 9}};
-         
+
 int c[][3] = {{1, 3, 0}, {-1, 5, 9}};
-                
+
 int c[2][3] = {1, 3, 0, -1, 5, 9};
 ```
 
@@ -39,14 +39,15 @@ int c[2][3] = {1, 3, 0, -1, 5, 9};
 
 You can initialize a three-dimensional array in a similar way like a two-dimensional array. Here's an example,
 
-```
+```c
 int test[2][3][4] = {
     {{3, 4, 2, 3}, {0, -3, 9, 11}, {23, 12, 23, 2}},
     {{13, 4, 56, 3}, {5, 9, 3, 5}, {3, 1, 4, 9}}};
 ```
 
 Example 1: Two-dimensional array to store and print values
-```
+
+```c
 // C program to store temperature of two cities of a week and display it.
 #include <stdio.h>
 const int CITY = 2;
@@ -75,8 +76,10 @@ int main()
   return 0;
 }
 ```
+
 Output
-```
+
+```c
 City 1, Day 1: 33
 City 1, Day 2: 34
 City 1, Day 3: 35
@@ -92,7 +95,7 @@ City 2, Day 5: 22
 City 2, Day 6: 25
 City 2, Day 7: 26
 
-Displaying values: 
+Displaying values:
 
 City 1, Day 1 = 33
 City 1, Day 2 = 34
@@ -111,7 +114,8 @@ City 2, Day 7 = 26
 ```
 
 Example 2: Sum of two matrices
-```
+
+```c
 // C program to find the sum of two matrices of order 2*2
 #include <stdio.h>
 int main()
@@ -151,8 +155,10 @@ int main()
   return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter elements of 1st matrix
 Enter a11: 2;
 Enter a12: 0.5;
@@ -170,7 +176,8 @@ Sum Of Matrix:
 ```
 
 Example 3: Three-dimensional array
-```
+
+```c
 // C Program to store and print 12 values entered by the user
 #include <stdio.h>
 int main()
@@ -202,9 +209,11 @@ int main()
   return 0;
 }
 ```
+
 Output
-```
-Enter 12 values: 
+
+```c
+Enter 12 values:
 1
 2
 3
