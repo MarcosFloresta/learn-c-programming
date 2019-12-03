@@ -12,20 +12,20 @@ An arithmetic operator performs mathematical operations such as addition, subtra
 
 | Operator | Meaning of Operator |
 | --- | --- |
-| `+`	| addition or unary plus |
-| `-`	| subtraction or unary minus |
-| `*`	| multiplication |
-| `/`	| division |
-| `%`	|remainder after division (modulo division) |
+| `+` | addition or unary plus |
+| `-` | subtraction or unary minus |
+| `*` | multiplication |
+| `/` | division |
+| `%` |remainder after division (modulo division) |
 
 Example 1: Arithmetic Operators
-```
+
+```c
 // Working of arithmetic operators
 #include <stdio.h>
 int main()
 {
     int a = 9,b = 4, c;
-    
     c = a+b;
     printf("a+b = %d \n",c);
     c = a-b;
@@ -36,12 +36,13 @@ int main()
     printf("a/b = %d \n",c);
     c = a%b;
     printf("Remainder when a divided by b = %d \n",c);
-    
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 a+b = 13
 a-b = 5
 a*b = 36
@@ -59,7 +60,7 @@ The modulo operator `%` computes the remainder. When `a=9` is divided by `b=4`, 
 
 Suppose `a = 5.0`, `b = 2.0`, `c = 5` and `d = 2`. Then in C programming,
 
-```
+```c
 // Either one of the operands is a floating-point number
 a/b = 2.5  
 a/d = 2.5  
@@ -76,7 +77,8 @@ C programming has two operators increment `++` and decrement `--` to change the 
 Increment `++` increases the value by 1 whereas decrement `--` decreases the value by 1. These two operators are unary operators, meaning they only operate on a single operand.
 
 Example 2: Increment and Decrement Operators
-```
+
+```c
 // Working of increment and decrement operators
 #include <stdio.h>
 int main()
@@ -90,8 +92,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 ++a = 11
 --b = 99
 ++c = 11.500000
@@ -106,15 +110,16 @@ An assignment operator is used for assigning a value to a variable. The most com
 
 | Operator | Example | Same as |
 | --- | --- | --- |
-| =	| a = b	| a = b |
+| = | a = b | a = b |
 | += | a += b | a = a+b |
 | -= | a -= b | a = a-b |
 | *= | a *= b | a = a*b |
 | /= | a /= b | a = a/b |
 | %= | a %= b | a = a%b |
 
-Example 3: Assignment Operators
-```
+Example 3: Assignment Op erators
+
+```c
 // Working of assignment operators
 #include <stdio.h>
 int main()
@@ -122,7 +127,7 @@ int main()
     int a = 5, c;
     c = a;      // c is 5
     printf("c = %d\n", c);
-    c += a;     // c is 10 
+    c += a;     // c is 10
     printf("c = %d\n", c);
     c -= a;     // c is 5
     printf("c = %d\n", c);
@@ -135,13 +140,15 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
-c = 5 
-c = 10 
-c = 5 
-c = 25 
-c = 5 
+
+```c
+c = 5
+c = 10
+c = 5
+c = 25
+c = 5
 c = 0
 ```
 
@@ -160,9 +167,9 @@ Relational operators are used in decision making and loops.
 | `>=` | Greater than or equal to | 5 >= 3 is evaluated to 1 |
 | `<=` | Less than or equal to | 5 <= 3 is evaluated to 0 |
 
-
 Example 4: Relational Operators
-```
+
+```c
 // Working of relational operators
 #include <stdio.h>
 int main()
@@ -183,8 +190,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 5 == 5 is 1
 5 == 10 is 0
 5 > 5 is 0
@@ -196,7 +205,7 @@ Output
 5 >= 5 is 1
 5 >= 10 is 0
 5 <= 5 is 1
-5 <= 10 is 1 
+5 <= 10 is 1
 ```
 
 ## C Logical Operators
@@ -210,7 +219,8 @@ An expression containing logical operator returns either 0 or 1 depending upon w
 | `!` | Logical NOT. True only if the operand is 0 | If c = 5 then, expression !(c==5) equals to 0. |
 
 Example 5: Logical Operators
-```
+
+```c
 // Working of logical operators
 #include <stdio.h>
 int main()
@@ -231,14 +241,16 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
-(a == b) && (c > b) is 1 
-(a == b) && (c < b) is 0 
-(a == b) || (c < b) is 1 
-(a != b) || (c < b) is 0 
-!(a != b) is 1 
-!(a == b) is 0 
+
+```c
+(a == b) && (c > b) is 1
+(a == b) && (c < b) is 0
+(a == b) || (c < b) is 1
+(a != b) || (c < b) is 0
+!(a != b) is 1
+!(a == b) is 0
 ```
 
 ### Explanation of logical operator program
@@ -270,8 +282,8 @@ Bitwise operators are used in C programming to perform bit-level operations.
 ### Comma Operator
 
 Comma operators are used to link related expressions together. For example:
- 
- ```
+
+```c
 int a, c = 5, d;
 ```
 
@@ -280,7 +292,8 @@ int a, c = 5, d;
 The `sizeof` is a unary operator that returns the size of data (constants, variables, array, structure, etc).
 
 Example 6: sizeof Operator
-```
+
+```c
 #include <stdio.h>
 int main()
 {
@@ -295,8 +308,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Size of int = 4 bytes
 Size of float = 4 bytes
 Size of double = 8 bytes
@@ -304,4 +319,3 @@ Size of char = 1 byte
 ```
 
 Other operators such as ternary operator `?:`, reference operator `&`, dereference operator `*` and member selection operator `->` will be discussed in later tutorials.
-
