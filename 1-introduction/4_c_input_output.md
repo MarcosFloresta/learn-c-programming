@@ -3,22 +3,25 @@
 In this tutorial, you will learn to use scanf() function to take input from the user, and printf() function to display output to the user.
 
 ## C Output
+
 In C programming, printf() is one of the main output function. The function sends formatted output to the screen. For example,
 
 Example 1: C Output
-```
-#include <stdio.h>    
+
+```c
+#include <stdio.h>
 int main()
-{ 
+{
     // Displays the string inside quotations
     printf("C Programming");
   
     return 0;
 }
 ```
+
 Output
 
-```
+```c
 C Programming
 ```
 
@@ -30,7 +33,8 @@ How does this program work?
 * The `return 0;` statement inside the `main()` function is the "Exit status" of the program. It's optional.
 
 Example 2: Integer Output
-```
+
+```c
 #include <stdio.h>
 int main()
 {
@@ -41,14 +45,16 @@ int main()
 ```
 
 Output
-```
+
+```c
 Number = 5
 ```
 
 We use `%d` format specifier to print `int` types. Here, the `%d` inside the quotations will be replaced by the value of `testInteger`.
 
 Example 3: float and double Output
-```
+
+```c
 #include <stdio.h>
 int main()
 {
@@ -59,8 +65,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 number1 = 13.500000
 number2 = 12.400000
 ```
@@ -68,17 +76,20 @@ number2 = 12.400000
 To print `float`, we use `%f` format specifier. Similarly, we use `%lf` to print `double` values.
 
 Example 4: Print Characters
-```
+
+```c
 #include <stdio.h>
 int main()
 {
-    char chr = 'a';    
+    char chr = 'a';
     printf("character = %c.", chr);  
     return 0;
-} 
+}
 ```
+
 Output
-```
+
+```c
 character = a
 ```
 
@@ -89,7 +100,8 @@ To print `char`, we use `%c` format specifier.
 In C programming, `scanf()` is one of the commonly used function to take input from the user. The `scanf()` function reads formatted input from the standard input such as keyboards.
 
 Example 5: Integer Input/Output
-```
+
+```c
 #include <stdio.h>
 int main()
 {
@@ -100,8 +112,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter an integer: 4
 Number = 4
 ```
@@ -111,7 +125,8 @@ Here, we have used `%d` format specifier inside the `scanf()` function to take `
 Notice, that we have used `&testInteger` inside `scanf()`. It is because `&testInteger` gets the address of `testInteger`, and the value entered by the user is stored in that address.
 
 Example 6: Float and Double Input/Output
-```
+
+```c
 #include <stdio.h>
 int main()
 {
@@ -126,8 +141,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter a number: 12.523
 Enter another number: 10.2
 num1 = 12.523000
@@ -137,19 +154,22 @@ num2 = 10.200000
 We use `%f` and `%lf` format specifier for `float` and `double` respectively.
 
 Example 7: C Character I/O
-```
+
+```c
 #include <stdio.h>
 int main()
 {
     char chr;
     printf("Enter a character: ");
-    scanf("%c",&chr);     
+    scanf("%c",&chr);
     printf("You entered %c.", chr);  
     return 0;
 }  
 ``` 
+
 Output
-```
+
+```c
 Enter a character: g
 You entered g.
 ```
@@ -159,13 +179,14 @@ When a character is entered by the user in the above program, the character itse
 And when we display that value using `%c` text format, the entered character is displayed. If we use `%d` to display the character, it's ASCII value is printed.
 
 Example 8: ASCII Value
-```
+
+```c
 #include <stdio.h>
 int main()
 {
     char chr;
     printf("Enter a character: ");
-    scanf("%c", &chr);     
+    scanf("%c", &chr);
     // When %c is used, a character is displayed
     printf("You entered %c.\n",chr);  
     // When %d is used, ASCII value is displayed
@@ -173,8 +194,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter a character: g
 You entered g.
 ASCII value is 103.
@@ -184,7 +207,7 @@ ASCII value is 103.
 
 Here's how you can take multiple inputs from the user and display them.
 
-```
+```c
 #include <stdio.h>
 int main()
 {
@@ -198,8 +221,10 @@ int main()
     return 0;
 }
 ```
+
 Output
-```
+
+```c
 Enter integer and then a float: -3
 3.4
 You entered -3 and 3.400000
@@ -216,18 +241,18 @@ As you can see from the above examples, we use
 
 Here's a list of commonly used C data types and their format specifiers.
 
-| Data Type	| Format Specifier |
+| Data Type | Format Specifier |
 | --- | --- |
-| `int`	| `%d` |
+| `int` | `%d` |
 | `char` |`%c` |
 | `float` | `%f` |
 | `double` | `%lf` |
-| `short int` |	`%hd` |
+| `short int` | `%hd` |
 | `unsigned int` | `%u` |
 | `long int` | `%li` |
-| `long long int` |	`%lli` |
-| `unsigned long int` |	`%lu` |
+| `long long int` | `%lli` |
+| `unsigned long int` | `%lu` |
 | `unsigned long long int` | `%llu` |
 | `signed char` | `%c` |
-| `unsigned char` |	`%c` |
+| `unsigned char` | `%c` |
 | `long double` | `%Lf` |
