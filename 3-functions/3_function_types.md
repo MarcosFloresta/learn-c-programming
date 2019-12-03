@@ -6,7 +6,7 @@ These 4 programs below check whether the integer entered by the user is a prime 
 
 The output of all these programs below is the same, and we have created a user-defined function in each example. However, the approach we have taken in each example is different.
 
-```
+```c
 Example 1: No arguments passed and no return value
 #include <stdio.h>
 void checkPrimeNumber();
@@ -42,14 +42,15 @@ The empty parentheses in `checkPrimeNumber();` statement inside the `main()` fun
 The return type of the function is `void`. Hence, no value is returned from the function.
 
 Example 2: No arguments passed but a return value
-```
+
+```c
 #include <stdio.h>
 int getInteger();
 int main()
 {
     int n, i, flag = 0;
    // no argument is passed
-    n = getInteger();    
+    n = getInteger();
     for(i=2; i<=n/2; ++i)
     {
         if(n%i==0){
@@ -64,7 +65,7 @@ int main()
     return 0;
 }
 // returns integer entered by the user
-int getInteger()       
+int getInteger()
 {
     int n;
     printf("Enter a positive integer: ");
@@ -78,7 +79,8 @@ The empty parentheses in the `n = getInteger();` statement indicates that no arg
 Here, the `getInteger()` function takes input from the user and returns it. The code to check whether a number is prime or not is inside the `main()` function.
 
 Example 3: Argument passed but no return value
-```
+
+```c
 #include <stdio.h>
 void checkPrimeAndDisplay(int n);
 int main()
@@ -91,7 +93,7 @@ int main()
     return 0;
 }
 // return type is void meaning doesn't return any value
-void checkPrimeAndDisplay(int n) 
+void checkPrimeAndDisplay(int n)
 {
     int i, flag = 0;
     for(i=2; i <= n/2; ++i)
@@ -113,7 +115,8 @@ The integer value entered by the user is passed to the `checkPrimeAndDisplay()` 
 Here, the `checkPrimeAndDisplay()` function checks whether the argument passed is a prime number or not and displays the appropriate message.
 
 Example 4: Argument passed and a return value
-```
+
+```c
 #include <stdio.h>
 int checkPrimeNumber(int n);
 int main()
