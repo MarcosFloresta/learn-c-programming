@@ -193,7 +193,72 @@ It should be noted that, online C compilers are limited (you can’t work with f
 
 ## Run C programming on Linux
 
+To run C programming on Linux, you need:
+
+* a compiler. We’ll install GNU GCC compiler which is good for beginners.
+* development tools and libraries.
+* a text editor (gEdit works just fine for our purpose). Or, you can download text editor of your choice.
+
+Here’s a step by step guide to run C in Linux (Ubuntu, Debian, CentOS, Fedora, Red Hat and Scientific Linux):
+
+1. Open the terminal and issue the following command.
+    For Ubuntu and Debian distribution:
+
+    ```
+    $ sudo apt-get update
+    $ sudo apt-get install build-essential manpages-dev
+    ```
+
+    For CentOS, Fedora, Red Hat and Scientific Linux:
+
+    ```
+    # yum groupinstall 'Development Tools'
+    ```
+
+    This installs GNU GCC compiler and related tools on your system.
+
+2. To verify if gcc compiler is installed, issue the command.
+
+    ```
+    $ gcc --version
+    ```
+
+    If you get output similar like this, gcc is correctly installed on your system.
+
+3. Open the text editor of your choice and save a file with .c extension. I made hello.c file using gEdit.
+
+    If you are a Linux wizard, feel free to use vim or emacs. Any editor is fine but, don’t forget to use .c extension; it’s important.
+
+4. Switch to the directory where the file is located. And, issue the following command.
+
+    ```
+    $ gcc program-source-code.c -o  name-of-your-choice
+    ```
+
+    Here, program-source.code.c is the filename you chose before. And, name-of-your-choice can be any name you prefer. In my case, I issued the following command. $ gcc hello.c -o hello
+
+5. If there is no error, an executable file named is created; hello is my case.
+
+6. Finally, you can see the output using following command.
+    ```
+    $ ./hello
+    ```
+    As you might have imagined, you need to use the name of executable file you chose before. Also, you need to use path to the execute file if you are in a different directory.
+
 ## Run C Programming in Windows (XP, 7, 8 and 10)
+
+To run C Programming in Windows, download a software called Code::Blocks. Then, write C code, save the file with .c extension and execute the code.
+
+To make this procedure even easier, follow this step by step guide.
+
+1. Go to the binary release download page of Code:Blocks official site.
+2. Under Windows XP / Vista / 7 / 8.x / 10 section, click the link with mingw-setup (highlighted row) either from Sourceforge.net or FossHub.
+3. Open the Code::Blocks Setup file and follow the instructions (Next > I agree > Next > Install); you don’t need to change anything. This installs the Code::Blocks with gnu gcc compiler, which is the best compiler to start with for beginners.
+4. Now, open Code::Blocks and go to File > New > Empty file (Shortcut: Ctrl + Shift + N)
+5. Write the C code and save the file with .c extension. To save the file, go to File > Save (Shortcut: Ctrl + S). Important: The filename should end with a .c extension, like: hello.c, your-program-name.c
+6. To run the program, go to Build > Build and Run (Shortcut: F9). This will build the executable file and run it.
+
+If your program doesn’t run and if you see error message "can't find compiler executable in your search path(GNU GCC compiler)", go to Settings > Compiler > Toolchain executables and click Auto-detect. This should solve the issue in most cases.
 
 # The fun begins: Your first C program
 
